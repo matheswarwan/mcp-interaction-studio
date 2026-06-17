@@ -1,0 +1,49 @@
+{
+  "name": "mcp-interaction-studio",
+  "version": "1.1.0",
+  "description": "MCP server for Salesforce Marketing Cloud Personalization — datasets, campaigns, executive audits (markdown + DOCX), governance, consumption, and gated write tools",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-interaction-studio": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    ".env.example"
+  ],
+  "keywords": [
+    "mcp",
+    "salesforce",
+    "interaction-studio",
+    "marketing-cloud-personalization",
+    "evergage",
+    "personalization",
+    "modelcontextprotocol",
+    "cursor",
+    "claude"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "audit": "npm run build && node dist/scripts/audit-dataset.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.7.0",
+    "docx": "^9.7.1",
+    "dotenv": "^16.4.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}

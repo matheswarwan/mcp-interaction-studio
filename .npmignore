@@ -1,0 +1,8 @@
+src/
+scripts/
+tsconfig.json
+.env
+.env.*
+!.env.example
+*.ts
+!dist/**/*.d.ts

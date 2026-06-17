@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+
+# Local API discovery (may contain PII / instance details)
+docs/Endpoint-discovery.md
+docs/*-discovery.md
+docs/private/
